@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Basic {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Въведи число = ");
+        double chislo = Double.parseDouble(scanner.nextLine());
+        System.out.print("Въведи входна единица = ");
+        String vhedinica = scanner.nextLine();
+        System.out.print("Въведи изходна единица = ");
+        String izhedinica = scanner.nextLine();
+        if (vhedinica.equals("mm")) {
+            double  output = chislo / 1000;
+            System.out.printf("%.3f",output,izhedinica);
+        }
+        else if (vhedinica.equals("cm")) {
+            double  output = chislo / 100;
+            System.out.printf("%.3f",output,izhedinica);
+        }
+        else if (vhedinica.equals("m")) {
+            double output = chislo / 1;
+            System.out.printf("%.3f",output,izhedinica);
+        }
+        if (izhedinica.equals("mm")) {
+            double  output = chislo * 1000;
+            System.out.printf("%.3f",output,izhedinica);
+        }
+        else if (izhedinica.equals("cm")) {
+            double output = chislo * 100;
+            System.out.printf("%.3f",output,izhedinica);
+        }
+        else if (izhedinica.equals("m")) {
+            double output = chislo * 1;
+            System.out.printf("%.3f",output,izhedinica);
+        }
+
+    }
+}
